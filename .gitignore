@@ -1,0 +1,12 @@
+# Local and build files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+node_modules/
+vendor/
+build/
+dist/

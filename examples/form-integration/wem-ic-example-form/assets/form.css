@@ -1,0 +1,19 @@
+/* Optional integration example only; all selectors are scoped. */
+.wem-ic-example,.wem-ic-example *{box-sizing:border-box}
+.wem-ic-example{max-width:900px;margin:24px auto;padding:24px;border:1px solid #dbe1e8;border-radius:6px;background:#fff;color:#30425e;font:16px/1.5 Arial,sans-serif}
+.wem-ic-example h2{font-size:25px;margin:0 0 12px;color:#243653}
+.wem-ic-example h3{font-size:20px;margin:22px 0 10px;color:#243653}
+.wem-ic-example__note{font-size:13px;color:#64748b}
+.wem-ic-example__items{margin:0;padding:0;list-style:none}
+.wem-ic-example__items li{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #e5eaf0;padding:10px 0}
+.wem-ic-example__items a{color:#5c2483;text-decoration:none}
+.wem-ic-example__items a:hover{text-decoration:underline}
+.wem-ic-example__fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.wem-ic-example__form label{display:block;margin:12px 0 8px;font-size:14px;font-weight:600}
+.wem-ic-example__form input,.wem-ic-example__form textarea{display:block;width:100%;margin-top:7px;border:1px solid #cbd5e1;border-radius:4px;background:#fff;color:#25344d;font:inherit;padding:10px;max-width:100%}
+.wem-ic-example__form button{border:0;border-radius:4px;padding:11px 22px;background:#651e7c;color:#fff;font-weight:600;cursor:pointer}
+.wem-ic-example__form button:disabled{opacity:.5;cursor:not-allowed}
+.wem-ic-example__notice{padding:12px;border-radius:4px;border:1px solid #e4bbbb;background:#fff4f4;color:#833}
+.wem-ic-example__notice.is-success{border-color:#b7dbca;background:#eef9f2;color:#205c3c}
+.wem-ic-example__honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+@media(max-width:600px){.wem-ic-example{padding:16px}.wem-ic-example__fields{grid-template-columns:1fr}}

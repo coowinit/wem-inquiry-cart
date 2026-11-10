@@ -1,0 +1,133 @@
+/* Reusable inquiry cart components. Scoped entirely to .wic-cart-ui. */
+.wic-cart-ui, .wic-cart-ui *, .wic-cart-ui *::before, .wic-cart-ui *::after {box-sizing:border-box;}
+.wic-cart-ui .wic-add-button, .wic-cart-ui .wic-cart__actions button, .wic-cart-ui .wic-cart__qty input, .wic-cart-ui .wic-floating-cart__button {font-family:inherit;}
+.wic-cart-ui {--wic-brand:#651e7c;--wic-success:#239b22;--wic-border:#d5dce4;--wic-ink:#25334d;--wic-muted:#748097;--wic-surface:#fff;--wic-soft:#f6f8fb}
+.wic-cart-ui .wic-products {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.wic-cart-ui .wic-product {overflow:hidden;background:#fff;border:1px solid #eceef0;border-radius:4px;box-shadow:0 4px 14px rgba(18,31,45,.08)}
+.wic-cart-ui .wic-product__image {position:relative;display:grid;place-items:center;aspect-ratio:1.44;background:#f5f6f7;overflow:hidden}
+.wic-cart-ui .wic-product__image img {display:block;width:100%;height:100%;object-fit:contain}
+.wic-cart-ui .wic-product__image-label {position:absolute;top:15px;right:16px;background:#fff;color:#8c7e89;border:1px solid #e5e1e5;font-size:10px;font-weight:700;letter-spacing:.06em;padding:5px 7px}
+.wic-cart-ui .wic-product__body {padding:16px 18px 18px}
+.wic-cart-ui .wic-product h3 {margin:0 0 11px;min-height:56px;font-size:18px;line-height:1.38;font-weight:500;color:var(--wic-brand)}
+.wic-cart-ui .wic-product__spec {display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid #e7e9ed;padding:12px 0;font-size:13px;color:#7a83a2}
+.wic-cart-ui .wic-add-button {display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 14px;border:1px solid var(--wic-brand);border-radius:3px;background:var(--wic-brand);color:white;font-size:14px;font-weight:700;cursor:pointer;transition:background-color .15s,border-color .15s,box-shadow .15s}
+.wic-cart-ui .wic-add-button:hover {background:#511766}
+.wic-cart-ui .wic-add-button:focus-visible {outline:3px solid #9a73ad;outline-offset:3px}
+.wic-cart-ui .wic-floating-cart__button:focus-visible {outline:3px solid #9a73ad;outline-offset:3px}
+.wic-cart-ui .wic-cart button:focus-visible {outline:3px solid #9a73ad;outline-offset:3px}
+.wic-cart-ui .wic-add-button__icon {display:flex;align-items:center}
+.wic-cart-ui .wic-add-button.is-added {background:var(--wic-success);border-color:var(--wic-success)}
+.wic-cart-ui .wic-add-button.is-added:hover {background:#1d891c}
+.wic-cart-ui .wic-add-button:disabled {cursor:wait}
+.wic-cart-ui .wic-cart {border-top:1px solid var(--wic-border)}
+.wic-cart-ui .wic-cart__row {display:grid;grid-template-columns:70px minmax(0,1fr) 84px 153px;gap:20px;align-items:center;padding:18px 12px;border-bottom:1px solid var(--wic-border)}
+.wic-cart-ui .wic-cart__thumb {display:block;width:70px;height:55px;object-fit:contain;border-radius:3px;background:#f6f6f6}
+.wic-cart-ui .wic-cart__title {min-width:0;color:var(--wic-brand);font-size:17px;line-height:1.45}
+.wic-cart-ui .wic-cart__qty label {display:block;margin-bottom:5px;font-size:11px;color:#7d8ba0}
+.wic-cart-ui .wic-cart__qty input {width:70px;height:36px;padding:5px 8px;border:1px solid #cbd3df;border-radius:3px;font-size:15px;color:var(--wic-ink)}
+.wic-cart-ui .wic-cart__actions {display:flex;gap:6px;justify-content:flex-end}
+.wic-cart-ui .wic-cart__actions button {border:1px solid #d1d6dd;color:#596a80;background:#fff;border-radius:3px;padding:7px 10px;cursor:pointer;font-size:13px}
+.wic-cart-ui .wic-cart__actions button:hover {border-color:#75859b;background:#f5f7fa}
+.wic-cart-ui .wic-cart__actions button[data-remove] {color:#a34747}
+.wic-cart-ui .wic-cart__empty {text-align:center;padding:46px 15px;color:var(--wic-ink)}
+.wic-cart-ui .wic-cart__empty-icon {display:block;font-size:35px;color:#a1a9b6;margin-bottom:12px}
+.wic-cart-ui .wic-cart__empty strong {font-size:18px}
+.wic-cart-ui .wic-cart__empty p {font-size:14px;color:#79869a}
+.wic-cart-ui .wic-cart__empty a {display:inline-block;margin-top:6px;color:var(--wic-brand);font-size:14px}
+.wic-cart-ui .wic-floating-cart {position:fixed;right:22px;top:52%;z-index:30;transform:translateY(-50%)}
+.wic-cart-ui .wic-floating-cart__button {position:relative;display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:#fff;border:1px solid #e4e4e4;box-shadow:0 3px 10px rgba(0,0,0,.18);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.wic-cart-ui .wic-floating-cart__button:hover {transform:scale(1.08);box-shadow:0 5px 15px rgba(0,0,0,.22)}
+.wic-cart-ui .wic-floating-cart__count {position:absolute;top:-6px;right:-6px;display:grid;place-items:center;min-width:23px;height:23px;padding:0 5px;border-radius:20px;border:2px solid #fff;background:#f34348;color:#fff;font-size:11px;font-weight:700}
+.wic-cart-ui .wic-floating-cart__count[hidden] {display:none}
+.wic-cart-ui .wic-screen-reader {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (max-width:980px) {
+.wic-cart-ui .wic-products {gap:14px}
+.wic-cart-ui .wic-product__body {padding:14px}
+.wic-cart-ui .wic-product h3 {font-size:16px;min-height:65px}
+.wic-cart-ui .wic-cart__row {grid-template-columns:65px minmax(0,1fr) 76px 140px;gap:12px}
+}
+@media (max-width:700px) {
+.wic-cart-ui .wic-products {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.wic-cart-ui .wic-product h3 {font-size:15px;min-height:64px}
+.wic-cart-ui .wic-product__spec {font-size:11px}
+.wic-cart-ui .wic-cart__row {grid-template-columns:58px minmax(0,1fr) 72px;gap:12px;padding:16px 0}
+.wic-cart-ui .wic-cart__thumb {width:58px;height:52px}
+.wic-cart-ui .wic-cart__title {font-size:14px}
+.wic-cart-ui .wic-cart__actions {grid-column:2/-1;justify-content:flex-start}
+.wic-cart-ui .wic-floating-cart {right:12px;top:auto;bottom:20px;transform:none}
+.wic-cart-ui .wic-floating-cart__button {width:56px;height:56px}
+}
+@media (max-width:410px) {
+.wic-cart-ui .wic-product__body {padding:12px 10px}
+.wic-cart-ui .wic-product h3 {font-size:14px;min-height:76px}
+.wic-cart-ui .wic-product__spec {display:block}
+.wic-cart-ui .wic-product__spec span {display:block;margin-bottom:4px}
+.wic-cart-ui .wic-add-button {font-size:12px;padding:7px 8px}
+.wic-cart-ui .wic-cart__row {grid-template-columns:50px minmax(0,1fr) 64px;gap:8px}
+.wic-cart-ui .wic-cart__thumb {width:50px}
+.wic-cart-ui .wic-cart__qty input {width:62px}
+.wic-cart-ui .wic-cart__actions {gap:6px}
+}
+@media (prefers-reduced-motion:reduce) {
+.wic-cart-ui .wic-add-button,.wic-cart-ui .wic-floating-cart__button {transition:none}
+}
+
+/* Product image/title links — replace # with product permalinks in production. */
+.wic-cart-ui .wic-product__image-link {display:block;width:100%;height:100%;}
+.wic-cart-ui .wic-product__image-link img {display:block;width:100%;height:100%;object-fit:contain;}
+.wic-cart-ui .wic-product__title-link,.wic-cart-ui .wic-cart__title-link {color:inherit;text-decoration:none;}
+.wic-cart-ui .wic-product__title-link:hover,.wic-cart-ui .wic-cart__title-link:hover {text-decoration:underline;}
+.wic-cart-ui .wic-product__title-link:focus-visible,.wic-cart-ui .wic-product__image-link:focus-visible,.wic-cart-ui .wic-cart__title-link:focus-visible,.wic-cart-ui .wic-cart__thumb-link:focus-visible {outline:2px solid var(--wic-brand);outline-offset:3px;}
+.wic-cart-ui .wic-cart__thumb-link {display:block;width:70px;height:55px;}
+.wic-cart-ui .wic-cart__thumb-link .wic-cart__thumb {width:100%;height:100%;}
+.wic-cart-ui .wic-add-button__icon img {display:block;width:17px;height:17px;}
+.wic-cart-ui .wic-floating-cart__icon {display:block;width:30px;height:30px;}
+@media(max-width:700px){.wic-cart-ui .wic-cart__thumb-link {width:58px;height:52px;}}
+@media(max-width:410px){.wic-cart-ui .wic-cart__thumb-link {width:50px;height:52px;}}
+
+/* WordPress component-only refinements: never style unscoped theme elements. */
+.wic-cart-ui .wic-add-wrap {display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap}
+.wic-cart-ui.wic-add-wrap {display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap}
+.wic-cart-ui .wic-add-status,.wic-cart-ui .wic-cart__notice {font-size:13px;color:var(--wic-brand)}
+.wic-cart-ui .wic-add-status:empty,.wic-cart-ui .wic-cart__notice:empty {display:none}
+.wic-cart-ui .wic-cart__loading {text-align:center;padding:35px 10px;color:var(--wic-muted)}
+.wic-cart-ui .wic-cart__thumb--placeholder {display:grid;place-items:center;background:var(--wic-soft);color:var(--wic-muted);font-size:28px;text-decoration:none}
+.wic-cart-ui .wic-cart-summary {margin:0;padding-left:20px}
+.wic-cart-ui .wic-cart-summary li {margin:0 0 8px}
+.wic-cart-ui .wic-cart-summary a {color:var(--wic-brand)}
+.wic-cart-ui .wic-floating-cart__button {text-decoration:none}
+.wic-cart-ui .wic-floating-cart__button img {max-width:30px}
+
+/* v0.1.2: contained cart listing, consistent with EVODEK inquiry form. */
+.wic-cart-ui.wic-cart-page {width:100%;max-width:1140px;margin:0 auto;padding:0 15px;color:var(--wic-ink);}
+.wic-cart-ui .wic-cart-page__heading {margin:0;padding:0 0 12px;border-bottom:1px solid var(--wic-border);font-size:25px;font-weight:600;line-height:1.35;color:#748097;}
+.wic-cart-ui.wic-cart-page .wic-cart {border-top:0;}
+.wic-cart-ui.wic-cart-page .wic-cart__row {padding:16px 0;}
+/* Keep badge text centered even when the site's theme applies a custom line-height. */
+.wic-cart-ui .wic-floating-cart__count {display:flex;align-items:center;justify-content:center;box-sizing:border-box;line-height:1 !important;text-align:center;vertical-align:middle;white-space:nowrap;font-family:Arial,Helvetica,sans-serif;}
+.wic-cart-ui .wic-floating-cart__count[hidden] {display:none;}
+/* Don't let broad theme link styles change the circle shape or icon alignment. */
+.wic-cart-ui .wic-floating-cart__button {padding:0;line-height:1;}
+.wic-cart-ui .wic-floating-cart__icon {margin:0;flex:none;}
+@media(max-width:700px){
+  .wic-cart-ui.wic-cart-page {padding:0 15px;}
+  .wic-cart-ui .wic-cart-page__heading {font-size:23px;}
+}
+
+/* v0.1.4: short-lived cart update/delete feedback; isolated to the plugin. */
+.wic-cart-ui.wic-cart-page .wic-cart__notice:not(:empty) {
+  display:block;
+  margin:14px 0;
+  padding:10px 14px;
+  border:1px solid #b8dcc5;
+  border-radius:4px;
+  background:#f0faf3;
+  color:#23683e;
+  font-size:14px;
+  line-height:1.5;
+}
+.wic-cart-ui.wic-cart-page .wic-cart__notice.is-error:not(:empty) {
+  border-color:#e6b8b8;
+  background:#fff2f1;
+  color:#9b3838;
+}
