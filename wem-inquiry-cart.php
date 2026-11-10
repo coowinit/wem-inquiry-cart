@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WEM Inquiry Cart
  * Description: Lightweight B2B product inquiry cart with reusable shortcodes. Does not handle contact forms or emails.
- * Version: 0.1.4
+ * Version: 1.0.0
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: WEM
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'WEM_IC_VERSION', '0.1.4' );
+define( 'WEM_IC_VERSION', '1.0.0' );
 define( 'WEM_IC_FILE', __FILE__ );
 define( 'WEM_IC_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WEM_IC_URL', plugin_dir_url( __FILE__ ) );
