@@ -4,7 +4,7 @@
 
 ## 最快测试
 
-1. 先安装并启用核心插件 `WEM Inquiry Cart v0.1.4`，设置产品类型，添加至少一件产品。
+1. 先安装并启用核心插件 `WEM Inquiry Cart v1.0.0`，设置产品类型，添加至少一件产品。
 2. 将 `wem-ic-example-form/` 文件夹复制到 WordPress 的 `wp-content/plugins/`，或上传 `wem-ic-example-form.zip`。
 3. 启用插件 **WEM IC Example Form (Testing Only)**。
 4. 新建一个仅供测试的 WordPress 页面，输入短代码 `[wem_ic_example_form]`。
